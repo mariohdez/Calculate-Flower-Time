@@ -71,39 +71,54 @@ public class CalculateAverageFlowerTime {
 	}
 	try {
 	    String CK = "CK", BG = "BG", GK = "GK", BC = "BC";
-	    fw.write(" , " + CK + ", " + BG + ", " + GK + ", " + BC + "\n");
+	    fw.write("Bee ID, Response time, Flower type\n");
+	    // fw.write("bid, " + CK + ", " + BG + ", " + GK + ", " + BC + "\n");
+
 	    for (Bee bee : bees) {
 		fw.write(bee.id);
-		fw.write(", ");
+		fw.write(",");
 		Double d = bee.flowerToAvg.get(CK);
 
+		// 1.
 		if (d == null) {
-		    fw.write("N/A, ");
+		    fw.write("NA,");
 		} else {
-		    fw.write(Double.toString(d) + ", ");
+		    fw.write(Double.toString(d) + ",");
 		}
+		fw.write(CK + "\n");
 
+		// 2.
+		fw.write(bee.id);
+		fw.write(",");
 		d = bee.flowerToAvg.get(BG);
 		if (d == null) {
-		    fw.write("N/A, ");
+		    fw.write("NA,");
 		} else {
-		    fw.write(Double.toString(d) + ", ");
+		    fw.write(Double.toString(d) + ",");
 		}
+		fw.write(BG + "\n");
 
+		// 3.
+		fw.write(bee.id);
+		fw.write(",");
 		d = bee.flowerToAvg.get(GK);
 		if (d == null) {
-		    fw.write("N/A, ");
+		    fw.write("NA,");
 		} else {
-		    fw.write(Double.toString(d) + ", ");
+		    fw.write(Double.toString(d) + ",");
 		}
+		fw.write(GK + "\n");
 
+		// 4.
+		fw.write(bee.id);
+		fw.write(",");
 		d = bee.flowerToAvg.get(BC);
 		if (d == null) {
-		    fw.write("N/A");
+		    fw.write("NA,");
 		} else {
-		    fw.write(Double.toString(d));
+		    fw.write(Double.toString(d) + ",");
 		}
-		fw.write("\n");
+		fw.write(BC + "\n");
 	    }
 	    fw.close();
 	} catch (IOException e) {
