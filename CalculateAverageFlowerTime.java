@@ -70,7 +70,7 @@ public class CalculateAverageFlowerTime {
 	    }
 	}
 	try {
-	    String CK = "CK", BG = "BG", GK = "GK", BC = "BC";
+	    String CK = "cyan/gray", BG = "blue/green", GK = "green/gray", BC = "blue/cyan";
 	    fw.write("Bee ID, Response time, Flower type\n");
 	    // fw.write("bid, " + CK + ", " + BG + ", " + GK + ", " + BC + "\n");
 
